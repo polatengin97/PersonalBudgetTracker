@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            lblBalance = new Label();
             lblBalanceTitle = new Label();
             panel2 = new Panel();
-            panel3 = new Panel();
-            lblTitle = new Label();
-            lblBalance = new Label();
-            lblTotalIncome = new Label();
-            lblTotalExpenses = new Label();
             lblIncomeTitle = new Label();
+            lblTotalIncome = new Label();
+            panel3 = new Panel();
             lblExpensesTitle = new Label();
+            lblTotalExpenses = new Label();
+            lblTitle = new Label();
             panel4 = new Panel();
-            lblType = new Label();
-            cmbType = new ComboBox();
-            txtAmount = new TextBox();
-            lblAmount = new Label();
             btnAdd = new Button();
+            lblAmount = new Label();
+            txtAmount = new TextBox();
+            cmbType = new ComboBox();
+            lblType = new Label();
             panel5 = new Panel();
-            label1 = new Label();
             lstTransactions = new ListBox();
+            label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -60,10 +60,21 @@
             panel1.Controls.Add(lblBalance);
             panel1.Controls.Add(lblBalanceTitle);
             panel1.Location = new Point(36, 81);
-            panel1.Margin = new Padding(4, 4, 4, 4);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
             panel1.Size = new Size(153, 83);
             panel1.TabIndex = 0;
+            // 
+            // lblBalance
+            // 
+            lblBalance.AutoSize = true;
+            lblBalance.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBalance.Location = new Point(51, 53);
+            lblBalance.Margin = new Padding(4, 0, 4, 0);
+            lblBalance.Name = "lblBalance";
+            lblBalance.Size = new Size(49, 19);
+            lblBalance.TabIndex = 2;
+            lblBalance.Text = "$0.00";
             // 
             // lblBalanceTitle
             // 
@@ -83,67 +94,10 @@
             panel2.Controls.Add(lblIncomeTitle);
             panel2.Controls.Add(lblTotalIncome);
             panel2.Location = new Point(223, 81);
-            panel2.Margin = new Padding(4, 4, 4, 4);
+            panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
             panel2.Size = new Size(151, 83);
             panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.White;
-            panel3.Controls.Add(lblExpensesTitle);
-            panel3.Controls.Add(lblTotalExpenses);
-            panel3.Location = new Point(407, 81);
-            panel3.Margin = new Padding(4, 4, 4, 4);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(154, 83);
-            panel3.TabIndex = 2;
-            // 
-            // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(36, 25);
-            lblTitle.Margin = new Padding(4, 0, 4, 0);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(285, 30);
-            lblTitle.TabIndex = 3;
-            lblTitle.Text = "Personal Budget Dashboard";
-            // 
-            // lblBalance
-            // 
-            lblBalance.AutoSize = true;
-            lblBalance.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBalance.Location = new Point(51, 53);
-            lblBalance.Margin = new Padding(4, 0, 4, 0);
-            lblBalance.Name = "lblBalance";
-            lblBalance.Size = new Size(49, 19);
-            lblBalance.TabIndex = 2;
-            lblBalance.Text = "$0.00";
-            // 
-            // lblTotalIncome
-            // 
-            lblTotalIncome.AutoSize = true;
-            lblTotalIncome.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalIncome.ForeColor = Color.FromArgb(0, 192, 0);
-            lblTotalIncome.Location = new Point(48, 53);
-            lblTotalIncome.Margin = new Padding(4, 0, 4, 0);
-            lblTotalIncome.Name = "lblTotalIncome";
-            lblTotalIncome.Size = new Size(49, 19);
-            lblTotalIncome.TabIndex = 3;
-            lblTotalIncome.Text = "$0.00";
-            // 
-            // lblTotalExpenses
-            // 
-            lblTotalExpenses.AutoSize = true;
-            lblTotalExpenses.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalExpenses.ForeColor = Color.FromArgb(192, 0, 0);
-            lblTotalExpenses.Location = new Point(51, 53);
-            lblTotalExpenses.Margin = new Padding(4, 0, 4, 0);
-            lblTotalExpenses.Name = "lblTotalExpenses";
-            lblTotalExpenses.Size = new Size(49, 19);
-            lblTotalExpenses.TabIndex = 3;
-            lblTotalExpenses.Text = "$0.00";
             // 
             // lblIncomeTitle
             // 
@@ -158,6 +112,29 @@
             lblIncomeTitle.TextAlign = ContentAlignment.MiddleCenter;
             lblIncomeTitle.Click += label1_Click;
             // 
+            // lblTotalIncome
+            // 
+            lblTotalIncome.AutoSize = true;
+            lblTotalIncome.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalIncome.ForeColor = Color.FromArgb(0, 192, 0);
+            lblTotalIncome.Location = new Point(48, 53);
+            lblTotalIncome.Margin = new Padding(4, 0, 4, 0);
+            lblTotalIncome.Name = "lblTotalIncome";
+            lblTotalIncome.Size = new Size(49, 19);
+            lblTotalIncome.TabIndex = 3;
+            lblTotalIncome.Text = "$0.00";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(lblExpensesTitle);
+            panel3.Controls.Add(lblTotalExpenses);
+            panel3.Location = new Point(407, 81);
+            panel3.Margin = new Padding(4);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(154, 83);
+            panel3.TabIndex = 2;
+            // 
             // lblExpensesTitle
             // 
             lblExpensesTitle.AutoSize = true;
@@ -169,6 +146,29 @@
             lblExpensesTitle.TabIndex = 4;
             lblExpensesTitle.Text = "Total Expense";
             lblExpensesTitle.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblTotalExpenses
+            // 
+            lblTotalExpenses.AutoSize = true;
+            lblTotalExpenses.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalExpenses.ForeColor = Color.FromArgb(192, 0, 0);
+            lblTotalExpenses.Location = new Point(51, 53);
+            lblTotalExpenses.Margin = new Padding(4, 0, 4, 0);
+            lblTotalExpenses.Name = "lblTotalExpenses";
+            lblTotalExpenses.Size = new Size(49, 19);
+            lblTotalExpenses.TabIndex = 3;
+            lblTotalExpenses.Text = "$0.00";
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(36, 25);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(285, 30);
+            lblTitle.TabIndex = 3;
+            lblTitle.Text = "Personal Budget Dashboard";
             // 
             // panel4
             // 
@@ -183,33 +183,17 @@
             panel4.Size = new Size(228, 262);
             panel4.TabIndex = 4;
             // 
-            // lblType
+            // btnAdd
             // 
-            lblType.AutoSize = true;
-            lblType.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblType.Location = new Point(14, 11);
-            lblType.Name = "lblType";
-            lblType.Size = new Size(127, 20);
-            lblType.TabIndex = 0;
-            lblType.Text = "Transaction Type\n";
-            // 
-            // cmbType
-            // 
-            cmbType.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbType.FormattingEnabled = true;
-            cmbType.Items.AddRange(new object[] { "Income ", "Expense" });
-            cmbType.Location = new Point(14, 43);
-            cmbType.Name = "cmbType";
-            cmbType.Size = new Size(163, 28);
-            cmbType.TabIndex = 1;
-            // 
-            // txtAmount
-            // 
-            txtAmount.Location = new Point(14, 129);
-            txtAmount.Name = "txtAmount";
-            txtAmount.Size = new Size(100, 27);
-            txtAmount.TabIndex = 3;
-            txtAmount.Text = "0.00";
+            btnAdd.BackColor = Color.Blue;
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(14, 184);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(195, 33);
+            btnAdd.TabIndex = 5;
+            btnAdd.Text = "ADD TRANSACTION";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // lblAmount
             // 
@@ -221,16 +205,33 @@
             lblAmount.TabIndex = 4;
             lblAmount.Text = "Amount";
             // 
-            // btnAdd
+            // txtAmount
             // 
-            btnAdd.BackColor = Color.Blue;
-            btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(14, 184);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(195, 33);
-            btnAdd.TabIndex = 5;
-            btnAdd.Text = "ADD TRANSACTION";
-            btnAdd.UseVisualStyleBackColor = false;
+            txtAmount.Location = new Point(14, 129);
+            txtAmount.Name = "txtAmount";
+            txtAmount.Size = new Size(100, 27);
+            txtAmount.TabIndex = 3;
+            txtAmount.Text = "0.00";
+            // 
+            // cmbType
+            // 
+            cmbType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbType.FormattingEnabled = true;
+            cmbType.Items.AddRange(new object[] { "Income ", "Expense" });
+            cmbType.Location = new Point(14, 43);
+            cmbType.Name = "cmbType";
+            cmbType.Size = new Size(163, 28);
+            cmbType.TabIndex = 1;
+            // 
+            // lblType
+            // 
+            lblType.AutoSize = true;
+            lblType.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblType.Location = new Point(14, 11);
+            lblType.Name = "lblType";
+            lblType.Size = new Size(127, 20);
+            lblType.TabIndex = 0;
+            lblType.Text = "Transaction Type\n";
             // 
             // panel5
             // 
@@ -242,6 +243,15 @@
             panel5.Size = new Size(251, 262);
             panel5.TabIndex = 5;
             // 
+            // lstTransactions
+            // 
+            lstTransactions.FormattingEnabled = true;
+            lstTransactions.Location = new Point(20, 38);
+            lstTransactions.Name = "lstTransactions";
+            lstTransactions.Size = new Size(215, 204);
+            lstTransactions.TabIndex = 1;
+            lstTransactions.SelectedIndexChanged += lstTransactions_SelectedIndexChanged;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -252,21 +262,12 @@
             label1.TabIndex = 0;
             label1.Text = "Recent Transactions";
             // 
-            // lstTransactions
-            // 
-            lstTransactions.FormattingEnabled = true;
-            lstTransactions.Location = new Point(20, 38);
-            lstTransactions.Name = "lstTransactions";
-            lstTransactions.Size = new Size(215, 204);
-            lstTransactions.TabIndex = 1;
-            lstTransactions.SelectedIndexChanged += lstTransactions_SelectedIndexChanged;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(1029, 748);
+            ClientSize = new Size(592, 482);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(lblTitle);
@@ -275,7 +276,7 @@
             Controls.Add(panel1);
             Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Location = new Point(50, 100);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
