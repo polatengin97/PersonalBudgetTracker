@@ -47,6 +47,12 @@
             panel5 = new Panel();
             lstTransactions = new ListBox();
             label1 = new Label();
+            label2 = new Label();
+            cmbCategory = new ComboBox();
+            label3 = new Label();
+            txtDescription = new TextBox();
+            label4 = new Label();
+            dtpDate = new DateTimePicker();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -173,6 +179,12 @@
             // panel4
             // 
             panel4.BackColor = Color.White;
+            panel4.Controls.Add(dtpDate);
+            panel4.Controls.Add(label4);
+            panel4.Controls.Add(txtDescription);
+            panel4.Controls.Add(label3);
+            panel4.Controls.Add(cmbCategory);
+            panel4.Controls.Add(label2);
             panel4.Controls.Add(btnAdd);
             panel4.Controls.Add(lblAmount);
             panel4.Controls.Add(txtAmount);
@@ -180,14 +192,14 @@
             panel4.Controls.Add(lblType);
             panel4.Location = new Point(36, 193);
             panel4.Name = "panel4";
-            panel4.Size = new Size(228, 262);
+            panel4.Size = new Size(218, 327);
             panel4.TabIndex = 4;
             // 
             // btnAdd
             // 
             btnAdd.BackColor = Color.Blue;
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(14, 184);
+            btnAdd.Location = new Point(14, 281);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(195, 33);
             btnAdd.TabIndex = 5;
@@ -199,7 +211,7 @@
             // 
             lblAmount.AutoSize = true;
             lblAmount.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAmount.Location = new Point(14, 94);
+            lblAmount.Location = new Point(14, 65);
             lblAmount.Name = "lblAmount";
             lblAmount.Size = new Size(67, 20);
             lblAmount.TabIndex = 4;
@@ -207,7 +219,7 @@
             // 
             // txtAmount
             // 
-            txtAmount.Location = new Point(14, 129);
+            txtAmount.Location = new Point(14, 88);
             txtAmount.Name = "txtAmount";
             txtAmount.Size = new Size(100, 27);
             txtAmount.TabIndex = 3;
@@ -218,7 +230,7 @@
             cmbType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbType.FormattingEnabled = true;
             cmbType.Items.AddRange(new object[] { "Income ", "Expense" });
-            cmbType.Location = new Point(14, 43);
+            cmbType.Location = new Point(14, 34);
             cmbType.Name = "cmbType";
             cmbType.Size = new Size(163, 28);
             cmbType.TabIndex = 1;
@@ -240,7 +252,7 @@
             panel5.Controls.Add(label1);
             panel5.Location = new Point(310, 193);
             panel5.Name = "panel5";
-            panel5.Size = new Size(251, 262);
+            panel5.Size = new Size(251, 327);
             panel5.TabIndex = 5;
             // 
             // lstTransactions
@@ -248,7 +260,7 @@
             lstTransactions.FormattingEnabled = true;
             lstTransactions.Location = new Point(20, 38);
             lstTransactions.Name = "lstTransactions";
-            lstTransactions.Size = new Size(215, 204);
+            lstTransactions.Size = new Size(215, 264);
             lstTransactions.TabIndex = 1;
             lstTransactions.SelectedIndexChanged += lstTransactions_SelectedIndexChanged;
             // 
@@ -262,12 +274,66 @@
             label1.TabIndex = 0;
             label1.Text = "Recent Transactions";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(14, 118);
+            label2.Name = "label2";
+            label2.Size = new Size(73, 20);
+            label2.TabIndex = 6;
+            label2.Text = "Category";
+            // 
+            // cmbCategory
+            // 
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Items.AddRange(new object[] { "Salary", "", "Food", "", "Transport", "", "Bills", "", "Shopping", "", "Entertainment", "", "Other" });
+            cmbCategory.Location = new Point(14, 141);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(121, 28);
+            cmbCategory.TabIndex = 7;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(14, 172);
+            label3.Name = "label3";
+            label3.Size = new Size(89, 20);
+            label3.TabIndex = 8;
+            label3.Text = "Description";
+            // 
+            // txtDescription
+            // 
+            txtDescription.Location = new Point(14, 195);
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(100, 27);
+            txtDescription.TabIndex = 9;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(14, 225);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 20);
+            label4.TabIndex = 10;
+            label4.Text = "Date";
+            // 
+            // dtpDate
+            // 
+            dtpDate.Format = DateTimePickerFormat.Short;
+            dtpDate.Location = new Point(14, 248);
+            dtpDate.Name = "dtpDate";
+            dtpDate.Size = new Size(200, 27);
+            dtpDate.TabIndex = 11;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(592, 482);
+            ClientSize = new Size(621, 624);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(lblTitle);
@@ -315,5 +381,11 @@
         private Panel panel5;
         private ListBox lstTransactions;
         private Label label1;
+        private ComboBox cmbCategory;
+        private Label label2;
+        private DateTimePicker dtpDate;
+        private Label label4;
+        private TextBox txtDescription;
+        private Label label3;
     }
 }
