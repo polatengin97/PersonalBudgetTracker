@@ -32,10 +32,5 @@
         {
             return Transactions.Sum(transaction => transaction.GetValue());
         }
-
-        public void RemoveTransaction(int index)
-        {
-            Transactions.RemoveAt(index);
-        }
     }
 }
