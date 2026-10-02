@@ -66,7 +66,7 @@ namespace PersonalBudgetTracker
 
         private void lstTransactions_DoubleClick(object sender, EventArgs e)
         {
-            
+
             if (lstTransactions.SelectedIndex == -1)
             {
                 return;
@@ -97,6 +97,26 @@ namespace PersonalBudgetTracker
                 MessageBoxIcon.Information
             );
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+          
+            if (lstTransactions.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a transaction.");
+                return;
+            }
+
+            int index = lstTransactions.SelectedIndex;
+
+            manager.RemoveTransaction(index);
+            lstTransactions.Items.RemoveAt(index);
+
+            lblTotalIncome.Text = $"${manager.GetTotalIncome():0.00}";
+            lblTotalExpenses.Text = $"${manager.GetTotalExpenses():0.00}";
+            lblBalance.Text = $"${manager.GetBalance():0.00}";
+        }
     }
     }
+
 
