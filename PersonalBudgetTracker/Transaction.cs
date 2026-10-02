@@ -1,5 +1,9 @@
-﻿namespace PersonalBudgetTracker
+﻿using System.Text.Json.Serialization;
+namespace PersonalBudgetTracker
 {
+    [JsonPolymorphic(TypeDiscriminatorPropertyName = "$type")]
+    [JsonDerivedType(typeof(Income), "income")]
+    [JsonDerivedType(typeof(Expense), "expense")]
     public abstract class Transaction
     {
         public decimal Amount { get; set; }
