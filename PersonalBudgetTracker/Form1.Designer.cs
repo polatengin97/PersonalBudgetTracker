@@ -53,6 +53,7 @@
             panel5 = new Panel();
             lstTransactions = new ListBox();
             label1 = new Label();
+            btnDelete = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -302,6 +303,7 @@
             // panel5
             // 
             panel5.BackColor = Color.White;
+            panel5.Controls.Add(btnDelete);
             panel5.Controls.Add(lstTransactions);
             panel5.Controls.Add(label1);
             panel5.Location = new Point(260, 193);
@@ -314,7 +316,7 @@
             lstTransactions.FormattingEnabled = true;
             lstTransactions.Location = new Point(3, 38);
             lstTransactions.Name = "lstTransactions";
-            lstTransactions.Size = new Size(443, 284);
+            lstTransactions.Size = new Size(443, 244);
             lstTransactions.TabIndex = 1;
             lstTransactions.SelectedIndexChanged += lstTransactions_SelectedIndexChanged;
             lstTransactions.DoubleClick += lstTransactions_DoubleClick;
@@ -328,6 +330,19 @@
             label1.Size = new Size(149, 20);
             label1.TabIndex = 0;
             label1.Text = "Recent Transactions";
+            // 
+            // btnDelete
+            // 
+            btnDelete.AccessibleRole = AccessibleRole.Clock;
+            btnDelete.BackColor = Color.Brown;
+            btnDelete.ForeColor = SystemColors.ButtonFace;
+            btnDelete.Location = new Point(3, 288);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(176, 33);
+            btnDelete.TabIndex = 2;
+            btnDelete.Text = "DELETE SELECTED";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // Form1
             // 
@@ -388,5 +403,6 @@
         private Label label4;
         private TextBox txtDescription;
         private Label label3;
+        private Button btnDelete;
     }
 }
